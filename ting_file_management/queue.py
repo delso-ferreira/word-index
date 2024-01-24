@@ -1,5 +1,6 @@
 from ting_file_management.abstract_queue import AbstractQueue
 
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -25,13 +26,12 @@ class Queue(AbstractQueue):
 
         if self.first is None:
             self.first = node
-        
         self._size += 1
 
     def dequeue(self):
         if self._size == 0:
             raise Exception("Fila vazia")
-        
+
         value = self.first.value
         self.first = self.first.next
 
@@ -42,9 +42,10 @@ class Queue(AbstractQueue):
         return value
 
     def search(self, index):
+
         if index < 0 or index >= self._size:
             raise IndexError("Índice Inválido ou Inexistente")
-        
+
         pointer = self.first
         for _ in range(index):
             pointer = pointer.next
