@@ -2,9 +2,12 @@ from ting_file_management.queue import Queue
 from ting_file_management.file_management import txt_importer
 
 def process(path_file, instance: Queue):    
-    for i in instance.enqueue(path_file):
-        if i['nome_do_arquivo'] == path_file:
-            return None
+    pointer = instance.first
+    while pointer is not None:    
+        if pointer.value['nome_do_arquivo'] == path_file:
+            return
+        pointer = pointer.next            
+            
     
     text = txt_importer(path_file)
     data = {

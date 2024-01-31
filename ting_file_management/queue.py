@@ -47,6 +47,11 @@ class Queue(AbstractQueue):
             raise IndexError("Índice Inválido ou Inexistente")
 
         pointer = self.first
-        for _ in range(index):
+        while pointer is not None:
+            if pointer.value == index:
+                return True
             pointer = pointer.next
-        return pointer.value
+        return False 
+    
+   
+    
