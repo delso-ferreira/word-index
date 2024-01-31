@@ -30,7 +30,7 @@ class Queue(AbstractQueue):
 
     def dequeue(self):
         if self._size == 0:
-            raise Exception("Fila vazia")
+            raise Exception("Não há elementos")
 
         value = self.first.value
         self.first = self.first.next
@@ -51,7 +51,4 @@ class Queue(AbstractQueue):
             if pointer.value == index:
                 return True
             pointer = pointer.next
-        return False 
-    
-   
-    
+        return False
