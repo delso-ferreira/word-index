@@ -13,6 +13,9 @@ class Queue(AbstractQueue):
         self.last = None
         self._size = 0
 
+    def __str__(self) -> str:
+        return (f"Queue(len={self._size}), values={self.first}")
+
     def __len__(self):
         return self._size
 
