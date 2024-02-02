@@ -46,12 +46,12 @@ class Queue(AbstractQueue):
 
     def search(self, index):
 
-        if index < 0 or index >= self._size:
-            raise IndexError("Índice Inválido ou Inexistente")
-
         pointer = self.first
+        current_index = 0
         while pointer is not None:
-            if pointer.value == index:
-                return True
+            if current_index == index:
+                return pointer.value
             pointer = pointer.next
-        return False
+            current_index += 1
+
+        raise IndexError("Índice Inválido ou Inexistente")
