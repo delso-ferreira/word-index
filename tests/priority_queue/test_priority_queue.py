@@ -6,6 +6,7 @@ from ting_file_management.priority_queue import PriorityQueue
 def priority_queue():
     return PriorityQueue()
 
+
 def test_enqueue_priority(priority_queue):
     priority_queue.enqueue({
         'nome_do_arquivo': 'file1.txt',
