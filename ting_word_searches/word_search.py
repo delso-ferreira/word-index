@@ -1,4 +1,15 @@
-def exists_word(word, instance):
+def verify_content(line, word, verify: bool):
+    if verify:
+        return {
+            "linha": line + 1,
+            "conteudo": word
+        }
+    return {
+        "linha": line + 1
+    }
+
+
+def exists_word(word, instance, verify: bool = False):
 
     results = []
 
@@ -9,7 +20,7 @@ def exists_word(word, instance):
 
         for i, line in enumerate(file['linhas_do_arquivo']):
             if word.lower() in line.lower():
-                occurrences.append({"linha": i + 1})
+                occurrences.append(verify_content(i, line, verify))
 
         if occurrences:
             results.append({
@@ -24,4 +35,4 @@ def exists_word(word, instance):
 
 
 def search_by_word(word, instance):
-    pass
+    return exists_word(word, instance, True)
