@@ -1,13 +1,39 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Google-like - Word-Index 🆎 📁 🖊️
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Este é um projeto em Python que simula um algoritmo de indexação de documentos semelhante ao utilizado pelo Google. O objetivo principal é permitir a identificação de ocorrências de termos em arquivos de texto (formato TXT) anexados.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+## Funcionalidades
+
+O projeto consiste em dois módulos principais:
+
+### 1. Módulo de Gerenciamento de Arquivos
+
+Este módulo permite anexar arquivos de texto (TXT) ao sistema para posterior indexação e busca. As principais funcionalidades incluem:
+
+- Anexar arquivos TXT ao sistema.
+
+- Gerenciar a lista de arquivos anexados.
+
+- Manipular estruturas de dados como Pilhas, Deques e Listas Duplamente Ligadas para eficiente gestão dos arquivos.
+
+### 2. Módulo de Buscas
+
+Este módulo permite operar funções de busca sobre os arquivos anexados. As principais funcionalidades incluem:
+
+- Realizar buscas por termos específicos nos arquivos indexados.
+
+- Retornar as ocorrências encontradas, indicando o arquivo e a posição do termo.
+
+- Utilizar estruturas de dados como Nós e Listas Ligadas para otimizar as operações de busca.
+
+## Habilidades Exercitadas
+
+Durante o desenvolvimento deste projeto, foram exercitadas diversas habilidades, tais como:
+
+- Manipulação de Pilhas para gestão de arquivos.
+
+- Utilização de Deques para organização eficiente de dados.
+
+- Implementação de Nós e Listas Ligadas para estruturar as informações dos arquivos.
+
+- Manipulação de Listas Duplamente Ligadas para facilitar as operações de busca.
